@@ -1,0 +1,25 @@
+name: Flutter checks
+on:
+  push:
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: subosito/flutter-action@v2
+        with:
+          flutter-version: '3.44.0'
+          channel: stable
+          cache: true
+      - run: flutter pub get
+      - run: dart format --output=none --set-exit-if-changed lib test
+      - run: dart analyze --fatal-infos lib test
+      - run: flutter test --coverage
+      - run: flutter build web --release
+      - uses: actions/upload-artifact@v4
+        with:
+          name: daylist-web
+          path: build/web
