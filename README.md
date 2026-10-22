@@ -3,9 +3,11 @@
 A calm, local-first Flutter task manager. Keep a clear list, see your progress,
 and take the day one task at a time. No account or backend required.
 
-![Daylist desktop preview](docs/daylist-desktop.png)
+<p align="center">
+  <img src="docs/daylist-iphone.png" alt="Daylist on iPhone: yellow theme, task progress, search and task list" width="340">
+</p>
 
-[View the mobile preview](docs/daylist-mobile.png)
+[Desktop preview](docs/daylist-desktop.png) · [Web mobile preview](docs/daylist-mobile.png)
 
 ## Open source
 
